@@ -1,0 +1,16 @@
+---
+creation_rules:
+  - path_regex: kubernetes/.*\.sops\.ya?ml
+    encrypted_regex: "^(data|stringData)$"
+    key_groups:
+      - age:
+          - "age1etvas2d04gjcylcld4j5asveqthhnrhy2uwmmjewsr728p2z3p4sqz7449"
+  - path_regex: ansible/.*\.sops\.ya?ml
+    key_groups:
+      - age:
+          - "age1etvas2d04gjcylcld4j5asveqthhnrhy2uwmmjewsr728p2z3p4sqz7449"
+  # https://github.com/ansible-collections/community.sops/issues/153
+  - path_regex: /dev/stdin
+    key_groups:
+      - age:
+          - "age1etvas2d04gjcylcld4j5asveqthhnrhy2uwmmjewsr728p2z3p4sqz7449"

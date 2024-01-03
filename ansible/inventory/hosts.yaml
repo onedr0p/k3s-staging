@@ -1,0 +1,19 @@
+---
+kubernetes:
+  children:
+    master:
+      hosts:
+        zookeeper:
+          ansible_user: austin
+          ansible_host: 10.1.50.71
+    worker:
+      hosts:
+        yardstick:
+          ansible_user: austin
+          ansible_host: 10.1.50.72
+        xylophone:
+          ansible_user: austin
+          ansible_host: 10.1.50.73
+        waistcoat:
+          ansible_user: austin
+          ansible_host: 10.1.50.74
